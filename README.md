@@ -65,3 +65,23 @@ The Car Sales Dashboard is a dynamic and interactive solution developed using Po
 1. Open the Power BI file (`Car_Sales_Dashboard.pbix`) in Power BI Desktop.
 2. Use the filters (e.g., body style, dealer region) to customize views.
 3. Navigate between pages for detailed sales trends and summary insights.
+
+## Note PFA all the DAX that i used:
+• YTD Total Sale = TOTALYTD(SUM(car_data[Price ($)]),'Calendar Table'[Date])
+• PYTD = CALCULATE(SUM(car_data[Price ($)]), SAMEPERIODLASTYEAR('Calendar Table'[Date]))
+• Sales Difference = [YTD Total Sale] - [PYTD]
+• YoY Sales Growth = [Sales Difference] / [PYTD]
+• MTD Total Sales = TOTALMTD(SUM(car_data[Price ($)]),'Calendar Table'[Date])
+• MTD KPI = CONCATENATE("MTD Total Sales: ", FORMAT([MTD Total Sales]/1000000, "$0.00M"))
+• Avg Price = SUM(car_data[Price ($)]) / COUNT(car_data[Car_id])
+• YTD Avg Price = TOTALYTD([Avg Price],'Calendar Table'[Date])
+• PYTD Avg Price = CALCULATE([Avg Price], SAMEPERIODLASTYEAR('Calendar Table'[Date]))
+• Avg Price Diff = [YTD Avg Price] - [PYTD Avg Price]
+• YoY Avg Price Growth = [Avg Price Diff] / [PYTD Avg Price]
+• MTD Avg Price KPI = CONCATENATE("MTD Average Price: ", FORMAT([MTD Avg Price]/1000, "$0.00K"))
+• YTD Car Sold = TOTALYTD(COUNT(car_data[Car_id]),'Calendar Table'[Date])
+• PYTD Car Sold = CALCULATE(COUNT(car_data[Car_id]), SAMEPERIODLASTYEAR('Calendar Table'[Date]))
+• Car Sold Diff = [YTD Car Sold] - [PYTD Car Sold]
+• YoY Car Sold Growth = [Car Sold Diff] / [YTD Car Sold]
+• MTD Car Sold KPI = CONCATENATE("MTD Car Sold: ", FORMAT([MTD Car Sold]/1000, "0.00K"))
+
