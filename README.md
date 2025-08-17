@@ -67,6 +67,7 @@ The Car Sales Dashboard is a dynamic and interactive solution developed using Po
 3. Navigate between pages for detailed sales trends and summary insights.
 
 ## Note PFA all the DAX that i used:
+## These are Step by step (In some cases one is needed to make new one)
 • YTD Total Sale = TOTALYTD(SUM(car_data[Price ($)]),'Calendar Table'[Date])
 • PYTD = CALCULATE(SUM(car_data[Price ($)]), SAMEPERIODLASTYEAR('Calendar Table'[Date]))
 • Sales Difference = [YTD Total Sale] - [PYTD]
