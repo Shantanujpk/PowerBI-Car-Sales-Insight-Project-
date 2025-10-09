@@ -1,7 +1,7 @@
 # Car Sales Dashboard Project
 
 ## Overview
-The Car Sales Dashboard is a dynamic and interactive solution developed using Power BI. It provides a comprehensive overview of car dealership sales performance, enabling stakeholders to track key performance indicators (KPIs), identify trends, and make data-driven decisions.
+The Car Sales Dashboard is a dynamic and interactive solution developed using Power BI. It provides a comprehensive overview of car dealership sales performance, enabling stakeholders to track key performance indicators (KPIs), identify trends, and make data-driven decisions. 
 
 ---
 
